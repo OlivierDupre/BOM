@@ -10,6 +10,8 @@
         <module>commons</module>
         <module>angular</module>
         <module>jsf</module>
+        <module>bom-jee</module>
+        <module>bom-angular</module>
     </modules>
     <dependencyManagement>
         <dependencies>
