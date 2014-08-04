@@ -1,0 +1,4 @@
+BOM
+===
+
+Tests for BOM
