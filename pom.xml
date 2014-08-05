@@ -4,15 +4,15 @@
     <groupId>fr.gouv.agriculture.test</groupId>
     <artifactId>bom</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <name>${project.artifactId}</name>
+    <packaging>pom</packaging>
 
     <profiles>
         <profile>
             <id>angular-api</id>
             <modules>
                 <module>angular/angular-api</module>
-                <module>bom-composant</module>
+                <module>bom-commons</module>
                 <module>bom-angular</module>
             </modules>
         </profile>
@@ -20,7 +20,7 @@
             <id>angular-impl</id>
             <modules>
                 <module>angular/angular-impl</module>
-                <module>bom-composant</module>
+                <module>bom-commons</module>
                 <module>bom-angular</module>
             </modules>
         </profile>
@@ -28,7 +28,7 @@
             <id>jsf-api</id>
             <modules>
                 <module>jsf/jsf-api</module>
-                <module>bom-composant</module>
+                <module>bom-commons</module>
                 <module>bom-jsf</module>
             </modules>
         </profile>
@@ -36,15 +36,14 @@
             <id>jsf-impl</id>
             <modules>
                 <module>jsf/jsf-web</module>
-                <module>bom-composant</module>
-                <module>bom-jsf</module>
+                <module>bom-commons</module>
+                <module>bom-jee</module>
             </modules>
         </profile>
         <profile>
             <id>commons-api</id>
             <modules>
                 <module>commons/commons-api</module>
-                <module>bom-composant</module>
                 <module>bom-commons</module>
             </modules>
         </profile>
@@ -52,21 +51,24 @@
             <id>commons-impl</id>
             <modules>
                 <module>commons/commons-web</module>
-                <module>bom-composant</module>
                 <module>bom-commons</module>
             </modules>
         </profile>
     </profiles>
+    
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.4.2</version>
+                <version>2.5</version>
                 <configuration>
                     <updateDependencies>false</updateDependencies>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>bom-commons</module>
+    </modules>
 </project>
