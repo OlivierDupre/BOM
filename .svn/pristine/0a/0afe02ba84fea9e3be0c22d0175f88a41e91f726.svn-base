@@ -7,10 +7,6 @@
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
-    <scm>
-        <connection>scm:svn:https://scm.rmap.auzeville.agri/o2/bom/trunk</connection>
-    </scm>
-
     <profiles>
         <profile>
             <id>angular-api</id>
