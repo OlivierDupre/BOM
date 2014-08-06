@@ -3,12 +3,12 @@
 
     <groupId>fr.gouv.agriculture.test</groupId>
     <artifactId>bom</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:https://scm.rmap.auzeville.agri/o2/bom/trunk</connection>
+        <connection>scm:svn:https://scm.rmap.auzeville.agri/o2/bom/tags/bom-1.0</connection>
     </scm>
 
     <repositories>

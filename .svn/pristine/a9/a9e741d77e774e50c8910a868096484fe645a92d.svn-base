@@ -3,7 +3,7 @@
 
     <groupId>fr.gouv.agriculture.test</groupId>
     <artifactId>bom</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
@@ -15,8 +15,8 @@
         <repository>
             <!-- Release -->
             <id>Work-Rec</id>
-            <name />
-            <url>https://repos-rec.forge.agriculture/repository/o2-work/</url>
+            <name/>
+            <url>https://repos-rec.forge.agriculture/o2-work/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -29,7 +29,7 @@
             <!-- Deploy SNAPSHOT -->
             <id>Private-Rec</id>
             <name />
-            <url>https://repos-rec.forge.agriculture/repository/o2-private/</url>
+            <url>https://repos-rec.forge.agriculture/o2-private/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -44,7 +44,7 @@
             <uniqueVersion>false</uniqueVersion>
             <id>Work-Rec</id>
             <name>Rec-Release Repository</name>
-            <url>dav:https://repos-rec.forge.agriculture/repository/o2-work/</url>
+            <url>dav:https://repos-rec.forge.agriculture/o2-work/</url>
             <layout>default</layout>
         </repository>
 
@@ -52,7 +52,7 @@
             <uniqueVersion>false</uniqueVersion>
             <id>Private-Rec</id>
             <name>Rec-Snapshot Repository</name>
-            <url>dav:https://repos-rec.forge.agriculture/repository/o2-private/</url>
+            <url>dav:https://repos-rec.forge.agriculture/o2-private/</url>
             <layout>default</layout>
         </snapshotRepository>
     </distributionManagement>
@@ -117,13 +117,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav</artifactId>
-                <version>1.0-beta-2</version>
-            </extension>
-        </extensions>
     </build>
 </project>

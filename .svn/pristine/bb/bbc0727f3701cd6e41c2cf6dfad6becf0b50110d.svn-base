@@ -10,52 +10,36 @@
     <scm>
         <connection>scm:svn:https://scm.rmap.auzeville.agri/o2/bom/trunk</connection>
     </scm>
-
+    
     <repositories>
         <repository>
-            <!-- Release -->
-            <id>Work-Rec</id>
-            <name />
-            <url>https://repos-rec.forge.agriculture/repository/o2-work/</url>
             <releases>
                 <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
             </snapshots>
+            <id>Map</id>
+            <name />
+            <url>https://repos-rec.forge.agriculture/o2-work/</url>
         </repository>
 
         <repository>
-            <!-- Deploy SNAPSHOT -->
-            <id>Private-Rec</id>
-            <name />
-            <url>https://repos-rec.forge.agriculture/repository/o2-private/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+            <id>Work</id>
+            <name />
+            <url>https://repos-rec.forge.agriculture/o2-private/</url>
         </repository>
     </repositories>
-            
-    <distributionManagement>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>Work-Rec</id>
-            <name>Rec-Release Repository</name>
-            <url>dav:https://repos-rec.forge.agriculture/repository/o2-work/</url>
-            <layout>default</layout>
-        </repository>
-
-        <snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>Private-Rec</id>
-            <name>Rec-Snapshot Repository</name>
-            <url>dav:https://repos-rec.forge.agriculture/repository/o2-private/</url>
-            <layout>default</layout>
-        </snapshotRepository>
-    </distributionManagement>
 
     <profiles>
         <profile>
@@ -117,13 +101,9 @@
                 </configuration>
             </plugin>
         </plugins>
-        
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav</artifactId>
-                <version>1.0-beta-2</version>
-            </extension>
-        </extensions>
     </build>
+    
+    <modules>
+        <module>bom-commons</module>
+    </modules>
 </project>
