@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.gouv.agriculture.test</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0</version>
+    </parent>
+    
+    <groupId>fr.gouv.agriculture.test</groupId>
+    <artifactId>bom</artifactId>
+    <version>1.0</version>
+    <name>${project.artifactId}</name>
+    <packaging>pom</packaging>
+
+    <scm>
+        <connection>scm:svn:https://scm.rmap.auzeville.agri/o2/bom/tags/bom-1.0</connection>
+    </scm>
+
+    <profiles>
+        <profile>
+            <id>angular-api</id>
+            <modules>
+                <module>angular/angular-api</module>
+                <module>bom-commons</module>
+                <module>bom-angular</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>angular-impl</id>
+            <modules>
+                <module>angular/angular-impl</module>
+                <module>bom-commons</module>
+                <module>bom-angular</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>jsf-api</id>
+            <modules>
+                <module>jsf/jsf-api</module>
+                <module>bom-commons</module>
+                <module>bom-jsf</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>jsf-impl</id>
+            <modules>
+                <module>jsf/jsf-web</module>
+                <module>bom-commons</module>
+                <module>bom-jee</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>commons-api</id>
+            <modules>
+                <module>commons/commons-api</module>
+                <module>bom-commons</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>commons-impl</id>
+            <modules>
+                <module>commons/commons-web</module>
+                <module>bom-commons</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>
