@@ -2,5 +2,6 @@ target
 target/
 .git
 .git/
+.gitignore
 nb-configuration.xml
 nohup.out
